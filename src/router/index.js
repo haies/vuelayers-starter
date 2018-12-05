@@ -77,11 +77,22 @@ export const constantRouterMap = [
         path: '',
         component: () => import('@/views/dashboard/index'),
         name: 'Dashboard',
-        meta: { title: 'Dashboard', icon: 'chart', noCache: true }
+        meta: { title: 'Dashboard', icon: 'example', noCache: true }
       }
     ]
   },
-
+  {
+    path: '/map/switch',
+    component: Layout,
+    children: [
+      {
+        path: '',
+        component: () => import('@/views/resource-show/wms-map'),
+        name: 'Switch',
+        meta: { title: 'MapSwitch', icon: 'example', noCache: false }
+      }
+    ]
+  },
   {
     path: '/map/alone',
     component: Layout,
